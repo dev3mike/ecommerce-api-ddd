@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "l6d+EOgxOuA=",
+  "dgSpecHash": "zjJHkxaYsTM=",
   "success": true,
   "projectFilePath": "/Users/masoud/Projects/e-commerce-api-ddd/ECM.Tests/ECM.Tests.csproj",
   "expectedPackageFiles": [
     "/Users/masoud/.nuget/packages/coverlet.collector/6.0.2/coverlet.collector.6.0.2.nupkg.sha512",
     "/Users/masoud/.nuget/packages/fluentvalidation/11.11.0/fluentvalidation.11.11.0.nupkg.sha512",
+    "/Users/masoud/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "/Users/masoud/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.11.0/fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
     "/Users/masoud/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
     "/Users/masoud/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",

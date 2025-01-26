@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ECM.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04ba7043a76c9ba95ba76386f9b8879359c70036")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+981dddc56ca005db74f8ae8fd1ff7a5a535cfe3a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ECM.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ECM.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
