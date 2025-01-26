@@ -1,4 +1,6 @@
+using ECM.Infrastructure.Interfaces;
 using ECM.Infrastructure.Persistence;
+using ECM.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -7,15 +9,14 @@ namespace ECM.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructureServices(
-        this IServiceCollection services,
+    public static void AddInfrastructureServices(this IServiceCollection services,
         IConfiguration configuration)
     {
-        services.AddDbContext<ApplicationDbContext>(options =>
+        services.AddTransient<IUserRepository, UserRepository>();
+        
+        services.AddDbContext<ApplicationAppDbContext>(options =>
             options.UseNpgsql(
                 configuration.GetConnectionString("DefaultConnection"),
-                b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
-
-        return services;
+                b => b.MigrationsAssembly(typeof(ApplicationAppDbContext).Assembly.FullName)));
     }
 } 

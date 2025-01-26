@@ -39,15 +39,4 @@ public abstract class AggregateRoot
     {
         _domainEvents.Clear();
     }
-
-    /// <summary>
-    /// Override this to define equality comparison for aggregates.
-    /// </summary>
-    /// <returns>True if the aggregates are equal; otherwise, false.</returns>
-    public abstract override bool Equals(object? obj);
-
-    /// <summary>
-    /// Override this to provide a unique hash code for the aggregate.
-    /// </summary>
-    /// <returns>The hash code of the aggregate.</returns>
-    public abstract override int GetHashCode();}
+}
