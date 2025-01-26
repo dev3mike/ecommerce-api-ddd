@@ -867,6 +867,9 @@
       "ECM.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "ECM.SharedKernel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ECM.Domain.dll": {}
         },

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ECM.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b6c33ec1f2413eda3c98a6bbbbb4da745407a0f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04ba7043a76c9ba95ba76386f9b8879359c70036")]
 [assembly: System.Reflection.AssemblyProductAttribute("ECM.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ECM.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

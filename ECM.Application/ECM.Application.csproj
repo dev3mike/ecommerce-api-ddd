@@ -8,10 +8,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ECM.Domain\ECM.Domain.csproj" />
+    <ProjectReference Include="..\ECM.Infrastructure\ECM.Infrastructure.csproj" />
     <ProjectReference Include="..\ECM.SharedKernel\ECM.SharedKernel.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
     <PackageReference Include="MediatR" Version="12.4.1" />
   </ItemGroup>
 

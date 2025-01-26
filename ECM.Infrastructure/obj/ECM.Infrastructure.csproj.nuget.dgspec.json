@@ -25,7 +25,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/masoud/Projects/e-commerce-api-ddd/ECM.SharedKernel/ECM.SharedKernel.csproj": {
+                "projectPath": "/Users/masoud/Projects/e-commerce-api-ddd/ECM.SharedKernel/ECM.SharedKernel.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

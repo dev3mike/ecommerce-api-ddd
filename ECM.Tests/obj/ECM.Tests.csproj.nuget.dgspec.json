@@ -57,9 +57,27 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             },
             "Swashbuckle.AspNetCore.SwaggerGen": {
               "target": "Package",
@@ -118,6 +136,9 @@
               "/Users/masoud/Projects/e-commerce-api-ddd/ECM.Domain/ECM.Domain.csproj": {
                 "projectPath": "/Users/masoud/Projects/e-commerce-api-ddd/ECM.Domain/ECM.Domain.csproj"
               },
+              "/Users/masoud/Projects/e-commerce-api-ddd/ECM.Infrastructure/ECM.Infrastructure.csproj": {
+                "projectPath": "/Users/masoud/Projects/e-commerce-api-ddd/ECM.Infrastructure/ECM.Infrastructure.csproj"
+              },
               "/Users/masoud/Projects/e-commerce-api-ddd/ECM.SharedKernel/ECM.SharedKernel.csproj": {
                 "projectPath": "/Users/masoud/Projects/e-commerce-api-ddd/ECM.SharedKernel/ECM.SharedKernel.csproj"
               }
@@ -140,6 +161,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.4.1, )"
@@ -186,7 +211,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/masoud/Projects/e-commerce-api-ddd/ECM.SharedKernel/ECM.SharedKernel.csproj": {
+                "projectPath": "/Users/masoud/Projects/e-commerce-api-ddd/ECM.SharedKernel/ECM.SharedKernel.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

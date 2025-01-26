@@ -1,1 +1,10 @@
 /.idea
+*/obj/*
+*/bin/*
+ECM.Application/obj/
+ECM.Application/bin/
+ECM.Api/obj/
+ECM.Api/bin/
+ECM.SharedKernel/obj/
+ECM.SharedKernel/bin/
+ECM.Api/obj/
