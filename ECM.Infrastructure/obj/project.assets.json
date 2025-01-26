@@ -1,0 +1,114 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "ECM.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ECM.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ECM.Domain.dll": {}
+        }
+      },
+      "ECM.SharedKernel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/ECM.SharedKernel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ECM.SharedKernel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ECM.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ECM.Domain/ECM.Domain.csproj",
+      "msbuildProject": "../ECM.Domain/ECM.Domain.csproj"
+    },
+    "ECM.SharedKernel/1.0.0": {
+      "type": "project",
+      "path": "../ECM.SharedKernel/ECM.SharedKernel.csproj",
+      "msbuildProject": "../ECM.SharedKernel/ECM.SharedKernel.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "ECM.Domain >= 1.0.0",
+      "ECM.SharedKernel >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/masoud/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/masoud/Projects/e-commerce-api-ddd/ECM.Infrastructure/ECM.Infrastructure.csproj",
+      "projectName": "ECM.Infrastructure",
+      "projectPath": "/Users/masoud/Projects/e-commerce-api-ddd/ECM.Infrastructure/ECM.Infrastructure.csproj",
+      "packagesPath": "/Users/masoud/.nuget/packages/",
+      "outputPath": "/Users/masoud/Projects/e-commerce-api-ddd/ECM.Infrastructure/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/masoud/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "/Users/masoud/Projects/e-commerce-api-ddd/ECM.Domain/ECM.Domain.csproj": {
+              "projectPath": "/Users/masoud/Projects/e-commerce-api-ddd/ECM.Domain/ECM.Domain.csproj"
+            },
+            "/Users/masoud/Projects/e-commerce-api-ddd/ECM.SharedKernel/ECM.SharedKernel.csproj": {
+              "projectPath": "/Users/masoud/Projects/e-commerce-api-ddd/ECM.SharedKernel/ECM.SharedKernel.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

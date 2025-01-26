@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "MT7IXBL+INw=",
+  "success": true,
+  "projectFilePath": "/Users/masoud/Projects/e-commerce-api-ddd/ECM.Api/ECM.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/masoud/.nuget/packages/microsoft.aspnetcore.openapi/9.0.1/microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "/Users/masoud/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
