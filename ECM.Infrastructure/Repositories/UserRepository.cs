@@ -1,4 +1,4 @@
-using ECM.Domain.Aggregates;
+using ECM.Domain.Entities;
 using ECM.Infrastructure.Interfaces;
 using ECM.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;

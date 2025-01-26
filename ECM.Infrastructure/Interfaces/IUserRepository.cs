@@ -1,4 +1,5 @@
-using ECM.Domain.Aggregates;
+
+using ECM.Domain.Entities;
 
 namespace ECM.Infrastructure.Interfaces;
 

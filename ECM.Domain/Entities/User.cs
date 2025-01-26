@@ -1,7 +1,7 @@
 using ECM.Domain.Events;
 using ECM.SharedKernel;
 
-namespace ECM.Domain.Aggregates;
+namespace ECM.Domain.Entities;
 
 public class User : AggregateRoot
 {

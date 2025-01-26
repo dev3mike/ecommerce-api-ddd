@@ -1,4 +1,4 @@
-using ECM.Domain.Aggregates;
+using ECM.Domain.Entities;
 using ECM.SharedKernel.Interfaces;
 
 namespace ECM.Domain.Events;

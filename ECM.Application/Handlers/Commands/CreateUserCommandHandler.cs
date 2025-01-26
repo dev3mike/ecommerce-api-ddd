@@ -1,5 +1,5 @@
 using ECM.Application.Commands;
-using ECM.Domain.Aggregates;
+using ECM.Domain.Entities;
 using ECM.Infrastructure.Interfaces;
 using MediatR;
 
