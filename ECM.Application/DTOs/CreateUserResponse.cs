@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace ECM.Api.DTOs;
+namespace ECM.Application.DTOs;
 
 public class CreateUserResponse
 {

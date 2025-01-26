@@ -1,5 +1,6 @@
-using ECM.Api.DTOs;
 using ECM.Application.Commands;
+using ECM.Application.DTOs;
+using ECM.Application.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,5 +19,16 @@ public class UsersController(IMediator mediator) : ControllerBase
             Id = userId
         };
         return CreatedAtAction(nameof(CreateUser), new { id = userId }, response);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetUserById(Guid id)
+    {
+        var query = new GetUserByIdQuery(id);
+        var user = await mediator.Send(query);
+        if (user is null)
+            return NotFound($"User with ID {id} not found.");
+
+        return Ok(user);    
     }
 }
