@@ -10,7 +10,7 @@ public class GetUserByIdQueryHandler(IUserRepository userRepository)
 {
     public async Task<GetUserByIdResponse> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
     {
-        var user = await userRepository.GetByIdAsync(request.Id);
+        var user = await userRepository.GetByIdAsync(request.Id, includeOrganizations: true);
 
         if (user == null)
             return null;
@@ -20,7 +20,13 @@ public class GetUserByIdQueryHandler(IUserRepository userRepository)
             Id = user.Id,
             Name = user.Name,
             Email = user.Email,
-            CreatedAt = user.CreatedAt
+            CreatedAt = user.CreatedAt,
+            Organizations = user.Organizations.Select(o => new OrganizationDto
+            {
+                Id = o.Id,
+                Name = o.Name,
+                CreatedAt = o.CreatedAt
+            }).ToList()
         };
     }
 }
