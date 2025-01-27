@@ -1,8 +1,6 @@
-using ECM.Application.Handlers;
-using ECM.Application.Validators;
+using ECM.Application;
 using ECM.Infrastructure;
-using FluentValidation;
-using FluentValidation.AspNetCore;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,11 +16,15 @@ builder.Services.AddControllers();
 // Add Infrastructure Services
 builder.Services.AddInfrastructureServices(builder.Configuration);
 
+// Add Application Services
+builder.Services.AddApplicationServices(builder.Configuration);
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    c.SwaggerDoc("v1", new OpenApiInfo
     {
         Title = "E-Commerce API",
         Version = "v1",
@@ -30,23 +32,12 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// FluentValidation
-builder.Services.AddFluentValidationAutoValidation()
-    .AddFluentValidationClientsideAdapters()
-    .AddValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
-
-// MediatR
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateUserCommandHandler).Assembly));
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger(c =>
-    {
-        c.RouteTemplate = "api-docs/{documentName}/swagger.json";
-    });
+    app.UseSwagger(c => { c.RouteTemplate = "api-docs/{documentName}/swagger.json"; });
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/api-docs/v1/swagger.json", "E-Commerce API v1");
