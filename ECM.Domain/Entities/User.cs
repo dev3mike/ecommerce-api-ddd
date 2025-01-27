@@ -9,7 +9,10 @@ public class User : AggregateRoot
     public string Name { get; private set; }
     public string Email { get; private set; }
     public string Password { get; private set; }
-    public DateTime CreatedAt { get; set; }
+    public DateTime CreatedAt { get; private set; }
+    public ICollection<Organization> Organizations { get; private set; } = new List<Organization>();
+
+    private User() { } // For EF Core
 
     public User(string name, string email, string password)
     {

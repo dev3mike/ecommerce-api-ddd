@@ -37,8 +37,15 @@ public class UserRepository(ApplicationAppDbContext context, IDomainEventDispatc
         return false;
     }
 
-    public async Task<User?> GetByIdAsync(Guid id)
+    public async Task<User?> GetByIdAsync(Guid id, bool includeOrganizations = false)
     {
-        return await _context.Users.Where(x=>x.Id.Equals(id)).SingleOrDefaultAsync();
+        var query = _context.Users.AsQueryable();
+
+        if (includeOrganizations)
+        {
+            query = query.Include(x => x.Organizations);
+        }
+
+        return await query.FirstOrDefaultAsync(x => x.Id == id);
     }
 }
