@@ -1,23 +1,23 @@
 using ECM.Application.Commands;
 using ECM.Domain.Entities;
 using ECM.Infrastructure.Interfaces;
+using ECM.Infrastructure.Services;
 using MediatR;
 
-namespace ECM.Application.Handlers;
+namespace ECM.Application.Handlers.Commands;
 
-public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
+public class CreateUserCommandHandler(UserOrganizationService userOrganizationService)
+    : IRequestHandler<CreateUserCommand, Guid>
 {
-    private readonly IUserRepository _userRepository;
-    public CreateUserCommandHandler(IUserRepository userRepository)
-    {
-        _userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
-    }
+    private readonly UserOrganizationService _userOrganizationService = userOrganizationService ?? throw new ArgumentNullException(nameof(userOrganizationService));
 
     public async Task<Guid> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
-        var hashedPassword = request.Password;
-        var user = new User(request.Name, request.Email, hashedPassword);
-        await _userRepository.AddAsync(user);
+        var (user, _) = await _userOrganizationService.CreateUserWithOrganizationAsync(
+            request.Name,
+            request.Email,
+            request.Password
+        );
 
         return user.Id;
     }
