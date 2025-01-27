@@ -6,6 +6,7 @@ namespace ECM.Infrastructure.Persistence;
 public class ApplicationAppDbContext(DbContextOptions<ApplicationAppDbContext> options) : DbContext(options)
 {
     public DbSet<User> Users { get; set; }
+    public DbSet<Organization> Organizations { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
